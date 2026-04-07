@@ -1,0 +1,132 @@
+.footer__inner {
+    margin-top: 75px;
+    margin-bottom: 140px;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.footer__title {
+    font-family: var(--font-family_title);
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--white_text);
+    position: relative;
+}
+
+.footer__title::before {
+    content: '';
+    width: 75px;
+    height: 75px;
+    background-color: var(--acent_color);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    left: -38px;
+    top: -12px;
+}
+
+.footer__strip {
+    width: 100%;
+    height: 1px;
+    background-color: var(--white_text);
+    opacity: 0.5;
+    margin-bottom: 102px;
+}
+
+.footer__bot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__contacts-subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: #a6a6a6;
+}
+
+.footer__contacts-email,
+.footer__contacts-phone {
+    font-family: var(--font-family_title);
+    font-weight: 400;
+    font-size: 42px;
+    color: var(--white_text);
+}
+
+.footer__contacts-email {
+    margin-bottom: 18px;
+}
+
+.footer__contacts-phone {
+    margin-bottom: 60px;
+}
+
+.footer__contacts-subtitle {
+    margin-bottom: 24px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 45px;
+}
+
+.footer__blocks {
+    display: flex;
+    gap: 166px;
+}
+
+.footer__block {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 221px;
+}
+
+.footer__block-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #a6a6a6;
+}
+
+.footer__block-name {
+    font-family: var(--font-family_title);
+    font-weight: 400;
+    font-size: 42px;
+    color: var(--white_text);
+    margin-bottom: 4px;
+}
+
+.footer__block-text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #a6a6a6;
+}
+
+.footer__line {
+    height: 88px;
+    background-color: #303030;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.94;
+    color: var(--white_text);
+
+}
+
+.footer__line-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.footer__line p {
+    opacity: 0.6;
+}
+
+.footer__line span {
+    font-weight: 700;
+}

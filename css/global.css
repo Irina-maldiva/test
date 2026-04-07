@@ -1,0 +1,205 @@
+:root {
+    --white_text: #fff;
+    --acent_color: #f47521;
+    --grey_text: #979797;
+    --white_bg: #e3e3de;
+    --font-family_title: "Oswald";
+    --transition: all .3s;
+
+}
+
+.body {
+    font-family: "Archivo";
+    color: #141414;
+    background: #141414;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1735px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.button {
+    display: block;
+    font-family: var(--font-family_title);
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--white_text);
+    background-color: var(--acent_color);
+    border-left: 4px solid var(--white_text);
+    padding: 23px 61px;
+    max-width: 213px;
+
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition: var(--transition);
+}
+
+
+.button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--white_text);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: var(--transition) ease-out;
+}
+
+.button:hover {
+    color: var(--acent_color);
+}
+
+.button:hover:before {
+    transform: scaleX(1);
+}
+
+.bg__text {
+    font-weight: 600;
+    line-height: .98;
+    font-size: 383px;
+    position: absolute;
+    letter-spacing: 8px;
+    font-family: var(--font-family_title);
+}
+
+.bg__text p {
+    position: relative;
+    z-index: -1;
+}
+
+.bg__text p::after {
+    content: 'WITHIN';
+    position: absolute;
+    -webkit-text-stroke: 4px #ffffff4d;
+    left: 0;
+    z-index: -2;
+}
+
+.main-title {
+    font-family: var(--font-family_title);
+    font-weight: 500;
+    font-size: 70px;
+    color: var(--white_text);
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: var(--acent_color);
+}
+
+.card-line {
+    height: 2px;
+    background: #7c7c7c;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition: var(--transition);
+}
+
+.card-line:before {
+    content: "";
+    height: 6px;
+    position: absolute;
+    z-index: -1;
+    inset: -2px 0 0 0;
+    background: var(--acent_color);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: .6s;
+    transition-timing-function: ease-out;
+}
+
+.coaches__card:hover .card-line:before,
+.programm__card:hover .card-line:before {
+    transform: scaleX(1);
+}
+
+.programm__card-img::after,
+.training__card-img::after,
+.coaches__card-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #f4752180;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.programm__card:hover .programm__card-img::after,
+.training__card:hover .training__card-img::after,
+.coaches__card:hover .coaches__card-img::after {
+    opacity: 1;
+}
+
+
+.nav_link::before,
+.timetable__tab::before,
+.accordion__flex-name::before,
+.about-expanded__tabs-tab::before {
+    content: '';
+    background-color: var(--acent_color);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+
+    transition: var(--transition);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.nav_link:hover::before,
+.timetable__tab:hover::before,
+.accordion__flex:hover .accordion__flex-name::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.link-timetable {
+    height: 108px;
+    width: 100%;
+    background-color: var(--acent_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-timetable-text {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.44;
+    letter-spacing: 0.1em;
+}
+
+
+#timetable,
+#about-expanded,
+#events,
+#product,
+#about,
+#coaches {
+    scroll-margin-top: 50px;
+}
